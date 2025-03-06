@@ -28,24 +28,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $conn->prepare("UPDATE Animals set adoption_status = 'Adopted' where animal_id = :animal_id");
         $stmt->bindParam(':animal_id', $animal_id);
         $stmt->execute();
-        echo "Adoption successful!";
-    } catch(PDOException $e) {
-        echo "Error: " . $e->getMessage();
+        // Redirect to success page with details
+        header("Location: adoption_success.php?animal_id=$animal_id&name=$name&email=$email&phone=$phone&address=$address");
+        exit();
+    } catch (PDOException $e) {
+        // Log the error (recommended)
+        error_log("PDO Exception: " . $e->getMessage());
+
+        // Optionally, display a user-friendly error message (not the raw exception)
+        // echo "An error occurred. Please try again later.";
+
+        // Redirect to failure page
+        header("Location: adoption_failure.php");
+        exit();
     }
 }
-
-/*
- // Example: after uploading an image
- $inputImagePath = "public/images/uploaded_image.jpg"; // Path to the uploaded image
- $outputImagePath = "public/images/watermarked_image.jpg";
- $watermarkText = "Animal Shelter";
-
- $pythonScriptPath = "../python/image_processing.py"; // Path to your Python script
-
- $command = "python3 " . escapeshellarg($pythonScriptPath) . " " . escapeshellarg($inputImagePath) . " " . escapeshellarg($outputImagePath) . " " . escapeshellarg($watermarkText);
-
- exec($command);
-
- // use $outputImagePath in your HTML to display the watermarked image
- */
 ?>
