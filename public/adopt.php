@@ -1,33 +1,37 @@
 <?php include '../includes/header.php'; ?>
 <?php include '../includes/navigation.php'; ?>
 
-<main class="container mx-auto p-4">
-<h2 class="text-xl font-semibold mb-4">Adoption Form</h2>
-<p>Please fill out the form below to apply for adoption:</p>
+<main class="container mx-auto p-8">
+<section class="max-w-2xl mx-auto bg-gradient-to-r from-yellow-100 to-green-100 rounded-lg shadow-lg p-8">
+<h2 class="text-4xl font-extrabold text-green-700 mb-6">Adoption Application</h2>
+<p class="text-lg text-gray-800 mb-6">Ready to give a loving animal a forever home? Please fill out the form below:</p>
 
-<form method="POST" action="process_adoption.php" class="max-w-md">
-<div class="mb-4">
-<label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
-<input type="text" name="name" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+<form method="POST" action="process_adoption.php" class="space-y-6">
+<div>
+<label for="name" class="block text-sm font-semibold text-green-600 mb-2">Your Full Name:</label>
+<input type="text" name="name" id="name" class="w-full px-4 py-3 border border-green-300 rounded-md shadow-sm focus:ring focus:ring-green-200 focus:outline-none text-gray-800" required>
 </div>
-<div class="mb-4">
-<label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-<input type="email" name="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+<div>
+<label for="email" class="block text-sm font-semibold text-green-600 mb-2">Email Address:</label>
+<input type="email" name="email" id="email" class="w-full px-4 py-3 border border-green-300 rounded-md shadow-sm focus:ring focus:ring-green-200 focus:outline-none text-gray-800" required>
 </div>
-<div class="mb-4">
-<label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone:</label>
-<input type="tel" name="phone" id="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+<div>
+<label for="phone" class="block text-sm font-semibold text-green-600 mb-2">Phone Number:</label>
+<input type="tel" name="phone" id="phone" class="w-full px-4 py-3 border border-green-300 rounded-md shadow-sm focus:ring focus:ring-green-200 focus:outline-none text-gray-800" required>
 </div>
-<div class="mb-4">
-<label for="address" class="block text-gray-700 text-sm font-bold mb-2">Address:</label>
-<textarea name="address" id="address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+<div>
+<label for="address" class="block text-sm font-semibold text-green-600 mb-2">Your Address:</label>
+<textarea name="address" id="address" rows="4" class="w-full px-4 py-3 border border-green-300 rounded-md shadow-sm focus:ring focus:ring-green-200 focus:outline-none text-gray-800" required></textarea>
 </div>
-<div class="mb-4">
-<label for="animal_id" class="block text-gray-700 text-sm font-bold mb-2">Animal ID:</label>
-<input type="number" name="animal_id" id="animal_id" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+<div>
+<label for="animal_id" class="block text-sm font-semibold text-green-600 mb-2">Animal ID:</label>
+<input type="text" name="animal_id" id="animal_id" value="<?php echo $_GET['id']; ?>" class="w-full px-4 py-3 border border-green-300 rounded-md shadow-sm focus:ring focus:ring-green-200 focus:outline-none text-gray-800" required>
 </div>
-<button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+<div>
+<button type="submit" class="w-full bg-gradient-to-r from-green-500 to-yellow-600 hover:from-green-600 hover:to-yellow-700 text-white font-extrabold py-4 rounded-md transition duration-300">Submit Application</button>
+</div>
 </form>
+</section>
 </main>
 
 <?php include '../includes/footer.php'; ?>

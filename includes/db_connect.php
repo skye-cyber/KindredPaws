@@ -1,8 +1,8 @@
 <?php
-$servername = "your_servername"; // e.g., localhost
-$username = "your_username";
-$password = "your_password";
-$dbname = "animal_shelter";
+$servername = "localhost"; // e.g., localhost
+$username = "phpmyadmin";
+$password = "KindredPaws_PASS";
+$dbname = "KindredPaws";
 
 try {
 	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

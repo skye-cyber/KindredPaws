@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Animal Shelter</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>KindredPaws Animal Shelter</title>
+<link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gray-100">
-<header class="bg-blue-500 text-white p-4">
-<h1 class="text-2xl font-bold">Local Animal Shelter</h1>
+<body class="bg-gradient-to-br from-indigo-50 to-purple-50">
+<header class="bg-gradient-to-r from-purple-600 to-indigo-700 text-white p-6 shadow-md">
+<div class="container mx-auto flex justify-between items-center">
+<h1 class="text-3xl font-extrabold tracking-tight">KindredPaws Shelter</h1>
+<p class="text-sm">Your partners in animal welfare</p>
+</div>
 </header>
