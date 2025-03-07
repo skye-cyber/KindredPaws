@@ -69,6 +69,24 @@ animal_shelter/
 * PHP uses the `exec()` function to execute the Python script.
 * Ensure that the Python script has the necessary permissions and that the file paths are correct.
 
+## UI Overview
+
+### Home
+![home](./docs/home.png)
+
+### Animals
+![animals](./docs/Animals.png)
+
+### About
+![about](./docs/About.png)
+
+### Adopt
+![adopt](./docs/Adopt.png)
+
+### contact
+![contact](./docs/contact.png)
+
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bug fixes or feature requests.
