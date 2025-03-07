@@ -23,7 +23,7 @@ This project is a dynamic, multi-page website designed to help a local animal sh
 
 ## Project Structure
 ```
-animal_shelter/
+KindredPaws/
 ├── public/
 │   ├── index.php
 │   ├── about.php
@@ -47,6 +47,7 @@ animal_shelter/
 │   ├── image_processing.py
 ├── database/
 │   └── animal_shelter.sql
+├──docs
 ```
 ## Setup Instructions
 
@@ -55,13 +56,16 @@ animal_shelter/
     * Install the Pillow library for Python: `pip install Pillow`.
     * Install tailwindcss or use the cdn link.
 2.  **Database Setup:**
-    * Create a MySQL database named `animal_shelter`.
+    * Create a MySQL database named `KindredPaws`.
     * Import the `animal_shelter.sql` file into the database.
     * Configure the database credentials in `includes/db_connect.php`.
 3.  **Project Placement:**
-    * Place the `animal_shelter` folder in your web server's document root.
+    * Place the `KindredPaws` folder in your web server's document root.
 4.  **Running the Application:**
-    * Open your web browser and navigate to `localhost/animal_shelter/public/` (or your server's URL).
+    * Open your web browser and navigate to `localhost/KindredPaws/public/` (or your server's URL).
+``(### Alternatively)``
+    3. Navigate to `/KindredPaws/public/` then Run `php -S localhost:8001`.
+    4. * Open your web browser and navigate to `php -S localhost:8001`. 
 
 ## Image Processing
 
