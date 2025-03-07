@@ -63,7 +63,7 @@ KindredPaws/
     * Place the `KindredPaws` folder in your web server's document root.
 4.  **Running the Application:**
     * Open your web browser and navigate to `localhost/KindredPaws/public/` (or your server's URL).
-``(### Alternatively)``
+    **(Alternatively)**
     3. Navigate to `/KindredPaws/public/` then Run `php -S localhost:8001`.
     4. * Open your web browser and navigate to `php -S localhost:8001`. 
 
